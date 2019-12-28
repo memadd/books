@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+<body>
+    <h1>All books</h1>
+
+    <ul>
+        {% for book in books %}
+            <li>
+                <a href="{{ url_for('book', book_id=book.id) }}">
+                    {{ book.title }} -- {{ book.year }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+

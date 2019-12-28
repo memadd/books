@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+<body>
+
+
+    <h1>Book Details</h1>
+
+    <ul>
+        <li>isbn: {{ book.isbn }}</li>
+        <li>title: {{ book.title }}</li>
+        <li>year: {{ book.year}} </li>
+        <li>average rating: {{avg}}</li>
+        <li>number of ratings: {{num}}</li>
+    </ul>
+    <br>
+
+    <h2>Author</h2>
+    <h3>{{ book.author }}</h3>
+    <br>
+    
+    <form action="{{ url_for('review') }}" method="post">
+    <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+      </div>
+      <br>
+      <div style="padding-bottom: 18px;">Review<span style="color: red;"> *</span><br/>
+        <textarea id="review" false name="review" style="width : 450px;" rows="9" class="form-control"></textarea>
+        </div>
+        <button class="button">Post comment</button>
+    </form>
+    {{msg}}
+</body>
+</html>

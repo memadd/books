@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('search') }}" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="isbn" placeholder="the ISBN number of a book" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="the title of a book" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="author" placeholder="the author" type="text">
+        </div>
+        
+        
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+    {{msg}}
+{% endblock %}
