@@ -12,5 +12,5 @@ Cs50 Web Project1
   -Registration  -Login  -Logout  -Import
   -Search  -Book Page  -Review Submission  -Goodreads Review Data  -API Access
 
-#API Refrence : Goodreads
-#Credits: CS50 Staff
+# API Refrence : Goodreads
+# Credits: CS50 Staff
